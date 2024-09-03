@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1 class="title1">Curso javascript completo</h1>
+   
+   <main class="cmain" id="idmain">
+    <h2>Subtitulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+   </main>
+
+   <section class="csection" id="idsection">
+    <h3>Subtitulo</h3>
+    <p class="paragrafo2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+    <p class="paragrafo2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <p class="paragrafo3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+    <p class="paragrafo3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+
+   </section>
+
+   <script>
+    document.getElementsByClassName("paragrafo2")[0].textContent = "alteraçao 1"
+    document.querySelectorAll(".paragrafo3")[0].textContent = "alteraçao 2"
+
+   </script>
+</body>
+</html>
