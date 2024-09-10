@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +15,30 @@
 
     <form action="#">
         <input type="text" id="txtNome" placeholder="nome"><br><br>
-        <input type="text" id="txtEmail" placeholder="email" readonly>
+        <input type="text" id="txtEmail" placeholder="email" maxlength="10" class="inputEmail"><br><br>
+
+        <input type="checkbox" id="contrato">
+        <label for="contrato">Li e aceito o contrato</label><br><br>
+        <textarea name="" id="" cols="30" rows="10" readonly>
+            Este contrato ...
+        </textarea>
     </form>
 
     <script>
         const txtNome  = document.querySelector("#txtNome")
         const txtEmail  = document.querySelector("#txtEmail")
+        const labelContrato = document.querySelector("label[for='contrato']")
+
         txtNome.value = "Ruan"
         txtNome.disabled = true
-    </script>
+        txtEmail.readOnly = true
+
+        console.log(labelContrato.htmlFor) // pegando o valor do atributo for
+        console.log(txtEmail.maxLength) // pegando o valor do maxlength
+        console.log(txtEmail.className) // pegando o valor do class
+
+
+        
+    </script> 
 </body>
 </html>
