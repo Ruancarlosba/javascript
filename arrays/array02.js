@@ -10,5 +10,5 @@ console.log(arr.find(function(el){
 }))
 
 console.log(arr.findIndex(function(el){
-    return el > 200
+    return el > 20
 }))
