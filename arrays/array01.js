@@ -24,11 +24,11 @@ console.log(every_Numeros)*/
 
  let arr1 = arr.filter(function(elemento,indice,_arr){
    
-    return typeof elemento === "number"
+    return typeof elemento === "number" 
 })
 
 //console.log(arr)
-console.log(arr1)
+console.log(arr1) // saida 1, 5, 10
 
 /*forEach - loop mais elegante */
 
