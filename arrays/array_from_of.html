@@ -25,8 +25,20 @@
         arr2.push(4,5)
         //console.log(arr2)
 
-        const paragrafos = document.querySelectorAll('p')
+        let paragrafos = document.querySelectorAll('p')
         console.log(paragrafos)
+
+        /*paragrafos.forEach(function(p,i){
+            p.textContent = `${++i} - ${p.textContent}`
+        })*/
+
+        paragrafos = Array.from(paragrafos)
+
+        paragrafos.map(function(p,i){
+            p.textContent = `${++i} - ${p.textContent}`
+        })
+
+        
     </script>
 </body>
 </html>
