@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+    <button id="btn">clique</button>
+
+    <script>
+        const msg = document.getElementById("msg")
+        const button = document.getElementById("btn")
+        
+
+        msg.addEventListener("keypress", keypress)
+        msg.addEventListener("keyup", keyup)
+        msg.addEventListener("keydown", keydown)
+
+        function keypress(e) {
+            console.log(this.value)
+            console.log("keypress")
+        }
+        function keyup(e) {
+            console.log(this.value)
+            console.log("keyup")
+        }
+        function keydown(e) {
+            console.log(this.value)
+            console.log("keydown")
+        }
+
+        function dobroclique() {
+            console.log("clicou duas vezes")
+            alert("clicou duas vezes")
+        }
+
+        button.addEventListener("dblclick",dobroclique)
+        document.body.addEventListener("scroll",function(){
+            alert("a pagina foi rolada")
+        })
+    </script>
+</body>
+</html> 

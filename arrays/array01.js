@@ -42,4 +42,4 @@ arr1 = arr1.map(function(el, i, _arr){
     return el * el
 })
 
-console.log(arr1)
+console.log(arr1) 

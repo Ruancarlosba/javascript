@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>paragrafo 1 </h1>
+   
+
+
+        <h2>paragrafo 2</h2>
+        <ul class="elemento">
+            <li>item 1-feito</li>
+            <li>item 2</li>
+            <li>teste</li>
+        </ul>
+
+   <script>
+
+    const elemento = document.querySelector(".elemento")
+    elemento.firstElementChild.style.background = 'blue' 
+
+    //console.log(elemento) 
+
+    // criando um elemento dinamico
+
+    const title2 = document.createElement("h3")
+    const Title2_atribute = document.createAttribute("id")
+
+    Title2_atribute.value = "titulo2"
+    title2.setAttributeNode(Title2_atribute)
+    title2.textContent = "Meu novo parágrafo testado....."
+
+    // jogando o titulo 2 para o body
+   const h2 = document.querySelector("h2")
+   h2.parentNode.insertBefore(title2,h2) 
+    
+   </script> 
+</body> 
+</html>

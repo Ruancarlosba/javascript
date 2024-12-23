@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background: rgb(37, 169, 20);
+            padding: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos</h1>
+     
+    <div class="container">
+        <button id="btn1">botaõ 1</button>
+        <button id="btn2">botaõ 2</button>
+        <button id="btn3">botaõ 3</button>
+    </div>
+
+    <script>
+        const btns = document.querySelectorAll(".container button");
+        const container = document.querySelector(".container")
+
+        // Evita que o clique no botão se propague para o documento
+       /* [...btns].forEach(btn => {
+            btn.addEventListener("click", function (e) {
+                e.stopPropagation(); // Impede a propagação do evento para o documento
+                console.log("clicou no botão");
+            });
+        });*/
+
+        container.addEventListener("click", function(e){
+            e.stopPropagation
+            
+            if(e.target.nodeName === "BUTTON") {
+                console.log(e.target)
+            }
+        })
+
+    </script>
+</body>
+</html>

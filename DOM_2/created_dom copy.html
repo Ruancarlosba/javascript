@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+ 
+    <h4>texto principal</h4>  <!-- Corrigido o fechamento da tag h4 -->
+    <h3>Sucesso</h3>
+        <ul class="container">
+            <li>item 1-feito</li>
+            <li>item 2</li>
+            <li>teste</li>
+        </ul>
+ 
+
+    <script>
+        // Criar um novo elemento <h1> e definir o atributo id
+        const title = document.createElement("h1");
+        const atributo = document.createAttribute("id");
+        atributo.value = "title1";
+        title.setAttributeNode(atributo);
+        title.textContent = "novo parágrafo";
+
+        // Inserir o <h1> antes do primeiro <li> dentro de .container
+        document.querySelector(".container li").prepend(title);
+
+        // Criar e inserir um novo <h2> antes do elemento <ul> (lista)
+        const title2 = document.createElement("h2");
+        title2.textContent = "título 2";
+        const list = document.querySelector("ul");
+        document.body.querySelector(".container").insertBefore(title2, list);
+
+        // Mover o <h3> antes do <h4>
+        const ul = document.querySelector(".container");
+        const h3 = document.querySelector("h3");
+        ul.insertBefore(h3, document.querySelector("h4"));
+    </script>
+</body>
+</html>

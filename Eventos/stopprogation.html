@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stopPropagation exemplo</title>
+</head>
+<body>
+
+<div id="div1" style="width: 200px; height: 200px; background-color: lightblue;">
+  <button id="btn">Clique em mim</button>
+</div>
+
+<script>
+  // Evento na div
+  document.getElementById('div1').addEventListener('click', function() {
+    alert('Div clicada!');
+  });
+
+  // Evento no botão
+  document.getElementById('btn').addEventListener('click', function(event) {
+    event.stopPropagation(); // Impede a propagação do evento para a div
+    alert('Botão clicado!');
+  });
+</script>
+
+</body>
+</html>
