@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let n = 0
+        let tempo  = Date.now()
+
+        setTimeout(function(){
+
+            console.log("timeout depois de 2000ms")
+        },2000) 
+
+       let interval = setInterval(function(){
+            console.log("interval n:", n++)
+            if(n > 15) {
+                clearInterval(interval)
+            }
+        },1000) 
+        console.log(`tempo:${tempo}`)
+    </script>
+</body>
+</html> 

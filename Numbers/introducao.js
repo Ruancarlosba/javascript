@@ -9,6 +9,15 @@ Para números, ele pode ser usado para convertê-los diretamente em strings, ou 
 
 toLocaleString() - é utilizado para formatar números, datas e objetos em uma string de acordo com a convenção de uma localidade (ou várias localidades), com base no idioma e as configurações culturais do ambiente em que o código está sendo executado.
 
+MAX_VALUE - Representa o maior valor positivo que pode ser representado em JavaScript. Ele é próximo a 1.7976931348623157 × 10^308.
+
+MIN_VALUE - Representa o menor valor positivo (não negativo) que pode ser representado em JavaScript. É um número muito pequeno, aproximadamente 5e-324. Note que isso não é o mesmo que o número zero, que é 0.
+
+isNaN() - A função tenta converter o valor para um número e retorna:
+
+true: Se o valor não for um número válido.
+false: Se o valor for um número válido.
+
  */
 
 let numero = 1234567.890
@@ -54,3 +63,10 @@ numero = 12345
 console.log(numero.toLocaleString("pt-BR", {style: "currency", currency: "BRL"}))
 console.log(numero.toLocaleString("en-US", {style: "currency", currency: "USD"}))
 console.log(numero.toLocaleString("pt-PT", {style: "currency", currency: "EUR"}))
+
+
+console.log("-------MAX_VALUE e MIN_VALUE")
+console.log(Number.MAX_VALUE, Number.MIN_VALUE)
+
+
+console.log(isNaN(numero))

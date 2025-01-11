@@ -20,7 +20,7 @@
             
         }
 
-    })
+    }) 
 
     const feedbackMessage = document.getElementById("feedbackMessage")
     const feedbackMessagecloosebtn = feedbackMessage.getElementsByTagName("button")[0]
