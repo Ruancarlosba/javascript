@@ -10,6 +10,8 @@
     <button id="btnBack">Volta</button>
     <br>
     <button id="btnForward">Avança</button>
+    <br>
+    <button id="btnclose">fechar</button>
 
     <a href="http://google.com">google</a>
 
@@ -17,8 +19,13 @@
         document.getElementById("btnBack").addEventListener("click",function(){
             history.back()
         })
+        
         document.getElementById("btnForward").addEventListener("click", function(){
             history.forward()
+        })
+
+        document.getElementById("btnclose").addEventListener("click", function(){
+            close()
         })
     </script>
 </body>

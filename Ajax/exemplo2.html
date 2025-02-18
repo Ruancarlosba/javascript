@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Primeiro exemplo com   XMLHTTpRequest</h1>
+    <script src="createXMLHttpRequest.js"></script>
+
+    <script>
+
+        /*0 conexaõ naõ iniciada
+        1 request configurada
+        2 request enviada
+        3 em processamento
+        4 resposta recebida (completa: sucesso ou falha)
+        */
+        createXMLHttpRequest("GET","dados.json",mostrarUsuarios)
+
+        function mostrarUsuarios(data){
+            console.log(data)
+        }
+    </script>
+</body>
+</html>

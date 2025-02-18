@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>teste de </h1>
+
+    <input type="text" id="inputNumero" placeholder="digite o número">
+    <button onclick="verificar()"> clique</button>
+    <p></p>
+
+    <script>
+    
+        
+
+
+        function verificar() {
+
+            const inputNumero = document.querySelector("#inputNumero")
+            const clique = document.querySelector("button")
+            const resposta = document.querySelector("p")
+           
+            console.log(inputNumero) 
+            console.log(clique)  
+
+                    try {
+                    
+                    let numero = parseFloat(inputNumero.value)
+
+                    if(isNaN(numero)) {
+
+                        throw  Error("por favor insira o numero valido");
+                         
+                        
+                    }  else {
+                        resposta.textContent = "sucesso"
+                        //resposta.className = 'success';
+
+                    }
+                } catch (error) {
+                    resposta.textContent = error.message
+                   // resposta.className = 'error';
+                }
+
+                setTimeout(function(){
+                            resposta.textContent = ""
+                         },2000)
+
+
+
+        }
+
+        
+
+    </script>
+</body>
+</html>

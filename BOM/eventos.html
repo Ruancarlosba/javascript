@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eventos do BOM</h1>
+
+    <script>
+        window.addEventListener("load", function(){
+            console.log("load")
+        })
+
+        window.addEventListener("DOMContentLoaded", function(){
+            console.log("DOMContentLoaded")
+        })
+
+        window.addEventListener("resize", function(){
+            console.log("resize",innerWidth,innerHeight)
+        })
+
+        window.addEventListener("scroll", function(){
+            console.log("scroll", pageYOffset)
+        })
+
+        window.addEventListener("unload", function(){
+            console.log("unload")
+            debugger
+        })
+        window.addEventListener("beforeunload", function(){
+            console.log("beforeunload")
+            debugger
+        })
+    </script>
+</body>
+</html>

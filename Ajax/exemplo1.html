@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Primeiro exemplo com   XMLHTTpRequest</h1>
+    
+
+    <script>
+
+        /*0 conexaõ naõ iniciada
+        1 request configurada
+        2 request enviada
+        3 em processamento
+        4 resposta recebida (completa: sucesso ou falha)
+        */
+        const xrh = new XMLHttpRequest()
+
+        xrh.open("GET", "dados.json2")
+        xrh.send(null)
+
+        xrh.onreadystatechange = verificaAjax
+
+        function verificaAjax(){
+            console.log(xrh.readyState)
+                if(xrh.status === 200 || xrh.status === 304) {
+
+                    console.log(typeof xrh.responseText)
+                    const json = JSON.parse(xrh.responseText)
+                    console.log(json)
+
+                    mostrarDados(json)
+                } else {
+                    alert("algo deu errado com o servidor" + xrh.status)
+                    
+                }
+
+                function mostrarDados(dados){
+
+                }
+            }
+    </script>
+</body>
+</html>
